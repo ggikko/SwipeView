@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "ggikko.me.swipviewapp"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+    android {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.1'
+
+    //frame
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    //lombok
+    provided 'org.projectlombok:lombok:1.12.6'
+    apt "org.projectlombok:lombok:1.12.6"
+}

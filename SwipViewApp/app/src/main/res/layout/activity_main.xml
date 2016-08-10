@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sample"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:background="#66ddff00"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/btn_count_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="like"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="surface"/>
+
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>
